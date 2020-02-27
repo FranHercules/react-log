@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {withRouter} from "react-router-dom"
+import {withRouter} from "react-router-dom";
+import {Helmet} from "react-helmet"
 const initState = {
 	username: "",
 	email: "",
@@ -57,6 +58,10 @@ class Register extends Component{
 
 	render(){
 		return (
+			<>
+			<Helmet>
+				<title>Login</title>
+      		</Helmet>
 			<div className="full-centered">
 				<div className = "jumbotron">
 					<h1 className="display-3">Registro</h1>
@@ -99,6 +104,7 @@ class Register extends Component{
 					}
 				</div>
 			</div>
+			</>
 		);
 	}
 }
